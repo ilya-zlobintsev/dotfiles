@@ -1,0 +1,1 @@
+amixer set Capture toggle && amixer get Capture | grep '\[off\]' && notify-send.sh -t 1000 "MIC muted" --replace-file=/tmp/mutenotif || notify-send.sh -t 1000 "MIC unmuted" --replace-file=/tmp/mutenotif
