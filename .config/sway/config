@@ -20,7 +20,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu rofi -show
 
-output * bg ~/Pictures/milkyway.jpg fill
+output * bg ~/Pictures/hills.jpg fill
 
 input type:pointer {
     pointer_accel -0.4
@@ -215,6 +215,12 @@ exec_always import-gsettings \
 
 include /etc/sway/config.d/*
 
+exec swayidle -w \
+        timeout 600 'swaymsg "output * dpms off"' \
+                resume 'swaymsg "output * dpms on"' \
+        timeout 900 'swaylock -f -c 000000' \
+        before-sleep 'swaylock -f -c 000000'
+
 bindsym --to-code Ctrl+Mod1+L exec swaylock -f -c 000000 && swayidle timeout 1 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"; pkill -n swayidle'
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
@@ -229,7 +235,7 @@ bindsym --to-code $mod+o exec alacritty -e ranger
 bindsym --to-code $mod+n exec alacritty -e ncmpcpp
 bindsym --to-code $mod+i exec firefox
 bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
-bindsym $mod+comma exec thunar
+bindsym $mod+comma exec nemo
 
 bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
 bindsym --to-code $mod+Print exec grim ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
@@ -239,6 +245,7 @@ exec mako
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec redshift
 exec kdeconnect-indicator
-exec flatpak run org.telegram.desktop -startintray
-exec corectrl
+#exec flatpak run org.telegram.desktop -startintray
+#exec corectrl
 exec gammastep
+#exec polychromatic-tray-applet
