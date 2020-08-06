@@ -1,16 +1,3 @@
-/**
- * User: deadguy
- * Copyright: deadguy
- */
-
-configuration {
-	display-drun:    "Activate";
-	display-run:     "Execute";
-	display-window:  "Window";
-	show-icons:      true;
-	sidebar-mode:    true;
-}
-
 * {
 	background-color:            #080808;
 	text-color:                  #d3d7cf;
@@ -40,15 +27,6 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0;
 	padding:                     0;
-}
-
-window {
-	location:	 southwest;
-	anchor:		 southwest;
-	height:		 100%;
-	width:		 22%;
-	orientation: horizontal;
-	children:	 [mainbox];
 }
 
 mainbox {
