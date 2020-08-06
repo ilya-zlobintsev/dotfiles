@@ -7,3 +7,4 @@ export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=sway
+systemctl --user import-environment
