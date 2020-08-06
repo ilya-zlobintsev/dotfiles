@@ -47,19 +47,23 @@
     "cpu": {
         "interval": 1,
         "max-length": 15,
-        "format": "<span size=\"larger\">CPU: {usage}%</span>",
-        "on-click": "alacritty -e htop"
+        "format": "<span size=\"larger\"> {usage}%</span>",
+        "on-click": "alacritty -e htop --sort-key=PERCENT_CPU"
     },
 
     "memory": {
         "interval": 3,
         "max-length": 30,
-        "format": "<span size=\"larger\">MEM: {used:0.1f}GiB/{total:0.1f}GiB</span>",
-        "on-click": "alacritty -e htop"
+        /*"format": "<span size=\"larger\"> {used:0.1f}GiB/{total:0.1f}GiB</span>",*/
+        "format": "<span size=\"larger\"> {percentage}%</span>",
+        "on-click": "alacritty -e htop --sort-key=PERCENT_MEM"
     },
 
     "pulseaudio": {
-        "format": "<span size=\"larger\">VOL: {volume}%</span>",
+        "format": "<span size=\"larger\">{icon} {volume}%</span>",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
         "scroll-step": 1,
         "on-click": "pavucontrol"
     },
