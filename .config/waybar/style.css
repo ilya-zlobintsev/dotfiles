@@ -6,10 +6,17 @@
     min-height: 0;
 }
 
+
 window#waybar {
-    background: rgba(0, 0, 0, 0.8);
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
-    color: white;
+    background: black;
+}
+
+window#waybar.firefox {
+    background: rgba(12, 12, 13, 1);
+}
+
+window#waybar.empty {
+    background: rgba(12, 12, 13, 0.5);
 }
 
 #window {
@@ -50,6 +57,7 @@ window#waybar {
 #network,
 #cpu,
 #pulseaudio,
+#custom-xkblayout,
 #memory {
     margin: 0 5px;
 }

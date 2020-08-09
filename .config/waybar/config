@@ -4,7 +4,7 @@
     "height": 28,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock" ],
-    "modules-right": ["mpd", "network", "cpu", "memory", "pulseaudio", "tray"],
+    "modules-right": ["mpd", "network", "cpu", "memory", "custom/xkblayout", "pulseaudio", "tray"],
 
     "sway/workspaces": {
         "format": "<span size=\"larger\">{}</span>"
@@ -71,6 +71,11 @@
     "tray": {
             "icon-size": 21,
             "spacing": 6
+    },
+    "custom/xkblayout": {
+        "exec": "xkblayout.py",
+        "format": "<span size=\"larger\"> {}</span>",
+        "tooltip": false
     }
     
 }
