@@ -154,32 +154,32 @@ seat * hide_cursor 10000
 #
 # Resizing containers:
 #
-#mode "resize" {
-#    # left will shrink the containers width
-#    # right will grow the containers width
-#    # up will shrink the containers height
-#    # down will grow the containers height
-#    bindsym --to-code $left resize shrink width 20px
-#    bindsym --to-code $down resize grow height 20px
-#    bindsym --to-code $up resize shrink height 20px
-#    bindsym --to-code $right resize grow width 20px
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym --to-code $left resize shrink width 20px
+    bindsym --to-code $down resize grow height 20px
+    bindsym --to-code $up resize shrink height 20px
+    bindsym --to-code $right resize grow width 20px
+
+    # Ditto, with arrow keys
+    bindsym --to-code Left resize shrink width 20px
+    bindsym --to-code Down resize grow height 20px
+    bindsym --to-code Up resize shrink height 20px
+    bindsym --to-code Right resize grow width 20px
+
+    # Return to default mode
+    bindsym --to-code Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym --to-code $mod+r mode "resize"
 #
-#    # Ditto, with arrow keys
-#    bindsym --to-code Left resize shrink width 20px
-#    bindsym --to-code Down resize grow height 20px
-#    bindsym --to-code Up resize shrink height 20px
-#    bindsym --to-code Right resize grow width 20px
-#
-#    # Return to default mode
-#    bindsym --to-code Return mode "default"
-#    bindsym Escape mode "default"
-#}
-#bindsym --to-code $mod+r mode "resize"
-#
-bindsym $mod+ctrl+$left resize shrink width 20px
-bindsym $mod+ctrl+$right resize grow width 20px
-bindsym $mod+ctrl+$up resize shrink height 20px
-bindsym $mod+ctrl+$down resize grow height 20px
+#bindsym $mod+ctrl+$left resize shrink width 20px
+#bindsym $mod+ctrl+$right resize grow width 20px
+#bindsym $mod+ctrl+$up resize shrink height 20px
+#bindsym $mod+ctrl+$down resize grow height 20px
 
 bindsym --to-code XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
 bindsym --to-code XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
@@ -236,6 +236,7 @@ bindsym --to-code $mod+n exec alacritty -e ncmpcpp
 bindsym --to-code $mod+i exec firefox
 bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
 bindsym $mod+comma exec nemo
+bindsym $mod+apostrophe exec clipman pick -t rofi
 
 bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
 bindsym --to-code $mod+Print exec grim ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
@@ -243,9 +244,8 @@ bindsym --to-code Print exec grim - | wl-copy
 
 exec mako
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec redshift
 exec kdeconnect-indicator
-#exec flatpak run org.telegram.desktop -startintray
-#exec corectrl
 exec gammastep
 #exec polychromatic-tray-applet
+#
+exec flatpak run org.telegram.desktop -autostart
