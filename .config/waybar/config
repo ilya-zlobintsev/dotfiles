@@ -4,7 +4,7 @@
     "height": 28,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock" ],
-    "modules-right": ["mpd", "network", "cpu", "memory", "custom/xkblayout", "pulseaudio", "tray"],
+    "modules-right": ["network", "cpu", "memory", "custom/xkblayout", "pulseaudio", "tray"],
 
     "sway/workspaces": {
         "format": "<span size=\"larger\">{}</span>"
@@ -76,6 +76,15 @@
         "exec": "xkblayout.py",
         "format": "<span size=\"larger\"> {}</span>",
         "tooltip": false
+    },
+    "custom/mediaplayer": {
+        "exec": "playerctl metadata --format \"{{ artist }} - {{ title }}\"",
+        "format": "<span size=\"larger\">{}</span>",
+        "interval": 1,
+        "on-click": "alacritty -e ncmpcpp"
+    },
+
+    "wlr/taskbar": {
     }
     
 }
