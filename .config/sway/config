@@ -61,7 +61,7 @@ seat * hide_cursor 10000
     bindsym --to-code $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym --to-code $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym --to-code $mod+Shift+e exec wlogout
 #
 # Moving around:
 #
@@ -181,15 +181,17 @@ bindsym --to-code $mod+r mode "resize"
 #bindsym $mod+ctrl+$up resize shrink height 20px
 #bindsym $mod+ctrl+$down resize grow height 20px
 
-bindsym --to-code XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
-bindsym --to-code XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
-bindsym --to-code XF86AudioStop exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $SWAYSOCK.wob
+bindsym XF86AudioLowerVolume exec amixer sset Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $SWAYSOCK.wob
+bindsym XF86AudioMute exec amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $SWAYSOCK.wob
 
 bindsym --to-code $mod+grave exec toggle-mute.sh
 
 bindsym $mod+F1 exec playerctl play-pause 
 bindsym $mod+F2 exec playerctl previous
 bindsym $mod+F3 exec playerctl next 
+
 
 #
 # Status Bar:
@@ -235,7 +237,7 @@ bindsym --to-code $mod+o exec alacritty -e ranger
 bindsym --to-code $mod+n exec alacritty -e ncmpcpp
 bindsym --to-code $mod+i exec firefox
 bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
-bindsym $mod+comma exec nemo
+bindsym $mod+comma exec dolphin
 bindsym $mod+apostrophe exec clipman pick -t rofi
 
 bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
