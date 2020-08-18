@@ -1,0 +1,20 @@
+#!/bin/sh
+
+DISTRO="$(lsb_release -s -i)"
+
+if [ "$DISTRO" == "Arch" ]; then
+    sudo pacman -S --needed base-devel
+    
+    # Install yay if needed
+    if ! command -v yay $> /dev/null; then
+        cd /tmp/
+        git clone https://aur.archlinux.org/yay.git
+        cd yay
+        makepkg -sci --noconfirm
+        cd ..
+        rm yay -rf
+    fi
+
+    yay -Syu --needed --noconfirm - < ~/.config/yadm/pkglist
+    yay -Syu --needed --noconfirm - < ~/.config/yadm/pkglist.host
+fi
