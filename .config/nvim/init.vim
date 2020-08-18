@@ -20,9 +20,20 @@ let g:deoplete#enable_at_startup = 1
 
 let g:float_preview#docked=0
 
-lua require'nvim_lsp'.rust_analyzer.setup{}
-lua require'nvim_lsp'.pyls.setup{}
-lua require'nvim_lsp'.sourcekit.setup{}
+lua << EOF
+local nvim_lsp = require'nvim_lsp'
+nvim_lsp.rust_analyzer.setup{
+    completion = {
+        addCallArgumentSnippets = false;
+    }
+}
+EOF
+
+"nvim_lsp.rust_analyzer.setup{
+"    rust-analyzer.completion.addCallArgumentSnippets = false;
+"}
+"lua require'nvim_lsp'.pyls.setup{}
+"lua require'nvim_lsp'.sourcekit.setup{}
 "
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>

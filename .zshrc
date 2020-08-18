@@ -63,7 +63,7 @@ function aur-add {
     sudo pacman -Syu $@
 }
 
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then sway; fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then sway -d 2> ~/.cache/sway.log; fi
 
 # If not running interactively, do not do anything
 #[[ $- != *i* ]] && return

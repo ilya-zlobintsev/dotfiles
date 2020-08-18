@@ -227,6 +227,10 @@ bindsym --to-code Ctrl+Mod1+L exec swaylock -f -c 000000 && swayidle timeout 1 '
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
 
+bindsym $mod+f9 exec change-brightness.sh -
+bindsym $mod+f10 exec change-brightness.sh +
+
+
 #gaps inner 5
 default_border pixel 2
 smart_gaps on
