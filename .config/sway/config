@@ -1,8 +1,6 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
+#
+include ~/.config/sway/config.host
 
 ### Variables
 #
@@ -20,12 +18,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu rofi -show
 
-output * bg ~/Pictures/hills.jpg fill
 
-input type:pointer {
-    pointer_accel -0.4
-    accel_profile flat
-}
 
 input type:keyboard {
     xkb_layout us,ru,ua
@@ -226,9 +219,6 @@ exec swayidle -w \
 bindsym --to-code Ctrl+Mod1+L exec swaylock -f -c 000000 && swayidle timeout 1 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"; pkill -n swayidle'
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
-
-bindsym $mod+f9 exec change-brightness.sh -
-bindsym $mod+f10 exec change-brightness.sh +
 
 
 #gaps inner 5

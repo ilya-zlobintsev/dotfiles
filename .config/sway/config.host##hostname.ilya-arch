@@ -1,0 +1,10 @@
+output * bg ~/Pictures/hills.jpg fill
+
+input type:pointer {
+    pointer_accel -0.4
+    accel_profile flat
+}
+
+bindsym $mod+f9 exec change-brightness.sh -
+bindsym $mod+f10 exec change-brightness.sh +
+
