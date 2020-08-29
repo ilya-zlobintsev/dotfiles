@@ -35,7 +35,7 @@ seat * hide_cursor 10000
 # Basics:
 #
     # Start a terminal
-    bindsym --to-code $mod+Return exec $term
+    bindsym --to-code $mod+Return exec $term -e tmux
 
     # Kill focused window
     bindsym --to-code $mod+q kill

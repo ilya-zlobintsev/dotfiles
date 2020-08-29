@@ -17,4 +17,6 @@ if [ "$DISTRO" == "Arch" ]; then
 
     yay -Syu --needed --noconfirm - < ~/.config/yadm/pkglist
     yay -Syu --needed --noconfirm - < ~/.config/yadm/pkglist.host
+
+    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/tpm
 fi
