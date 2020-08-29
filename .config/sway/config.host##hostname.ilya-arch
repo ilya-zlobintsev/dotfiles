@@ -5,6 +5,7 @@ input type:pointer {
     accel_profile flat
 }
 
-bindsym $mod+f9 exec change-brightness.sh -
-bindsym $mod+f10 exec change-brightness.sh +
+set $mod Mod4
+bindsym $mod+f9 exec brightnessctl s 10%-
+bindsym $mod+f10 exec brightnessctl s 10%+
 

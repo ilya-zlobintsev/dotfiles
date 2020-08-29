@@ -216,12 +216,13 @@ exec swayidle -w \
         timeout 900 'swaylock -f -c 000000' \
         before-sleep 'swaylock -f -c 000000'
 
-bindsym --to-code Ctrl+Mod1+L exec swaylock -f -c 000000 && swayidle timeout 1 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"; pkill -n swayidle'
+bindsym --to-code XF86HomePage exec swaylock -f -c 000000 && swayidle timeout 1 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"; pkill -n swayidle'
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
 
 
-#gaps inner 5
+gaps inner 10
+gaps outer 2
 default_border pixel 2
 smart_gaps on
 smart_borders on
