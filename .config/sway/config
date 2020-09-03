@@ -232,6 +232,7 @@ bindsym --to-code $mod+o exec alacritty -e ranger
 bindsym --to-code $mod+n exec alacritty -e ncmpcpp
 bindsym --to-code $mod+i exec firefox
 bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
+bindsym --to-code $mod+u exec lutris
 bindsym $mod+comma exec dolphin ~/
 bindsym $mod+apostrophe exec clipman pick -t rofi
 
