@@ -1,0 +1,14 @@
+bindsym --to-code XF86HomePage exec swaylock -f -c 000000 && swayidle timeout 1 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"; pkill -n swayidle'
+
+bindsym --to-code $mod+Return exec alacritty -e tmux
+bindsym --to-code $mod+o exec alacritty -e ranger
+bindsym --to-code $mod+n exec alacritty -e ncmpcpp
+bindsym --to-code $mod+i exec firefox
+bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
+bindsym --to-code $mod+u exec lutris
+bindsym $mod+comma exec thunar
+bindsym $mod+apostrophe exec clipman pick -t rofi
+
+bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
+bindsym --to-code $mod+Print exec grim ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
+bindsym --to-code Print exec grim - | wl-copy

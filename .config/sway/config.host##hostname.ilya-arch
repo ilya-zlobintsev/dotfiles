@@ -1,11 +1,3 @@
-output * bg ~/Pictures/hills.jpg fill
 
-input type:pointer {
-    pointer_accel -0.4
-    accel_profile flat
-}
 
-set $mod Mod4
-bindsym $mod+f9 exec brightnessctl s 10%-
-bindsym $mod+f10 exec brightnessctl s 10%+
 
