@@ -1,6 +1,22 @@
 export PATH=~/.local/bin/:$PATH
-export RADV_PERFTEST=aco
+#export RADV_PERFTEST=aco
 export MANGOHUD=1
+
+export XDG_DATA_HOME=~/.local/share
+export XDG_CONFIG_HOME=~/.config
+
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
+export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
+export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android/
+
+export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode
+
+export GOPATH="$XDG_DATA_HOME"/go
+
+#export GTK_USE_PORTAL=1
 
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland
