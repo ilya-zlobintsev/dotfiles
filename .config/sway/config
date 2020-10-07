@@ -220,7 +220,6 @@ bindsym --to-code XF86HomePage exec swaylock -f -c 000000 && swayidle timeout 1 
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
 
-
 gaps inner 10
 gaps outer 2
 default_border pixel 2
@@ -233,14 +232,14 @@ bindsym --to-code $mod+n exec alacritty -e ncmpcpp
 bindsym --to-code $mod+i exec firefox
 bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
 bindsym --to-code $mod+u exec lutris
-bindsym $mod+comma exec dolphin ~/
+bindsym $mod+comma exec thunar
 bindsym $mod+apostrophe exec clipman pick -t rofi
 
 bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
 bindsym --to-code $mod+Print exec grim ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
 bindsym --to-code Print exec grim - | wl-copy
 
-exec mako
+exec /usr/local/lib/xfce4/notifyd/xfce4-notifyd
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec kdeconnect-indicator
 exec gammastep
