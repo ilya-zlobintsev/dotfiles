@@ -40,7 +40,11 @@ bindkey '\e[B' down-line-or-beginning-search
 
 #prompt walters
 #prompt spaceship
-PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
+if [ $USER = ilya ]; then
+    PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
+else
+    PROMPT='%F{red}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
+fi
 
 #SPACESHIP_PROMPT_SEPARATE_LINE=false
 #SPACESHIP_PROMPT_ADD_NEWLINE=false
