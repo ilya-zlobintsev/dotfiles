@@ -1,8 +1,4 @@
-exec swayidle -w \
-        timeout 600 'swaymsg "output * dpms off"' \
-                resume 'swaymsg "output * dpms on"' \
-        timeout 900 'swaylock -f -c 000000' \
-        before-sleep 'swaylock -f -c 000000'
+exec $idle
 
 exec_always import-gsettings \
     gtk-theme:gtk-theme-name \
@@ -14,5 +10,8 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec kdeconnect-indicator
 exec gammastep
 #exec polychromatic-tray-applet
+
+exec clipman restore
+exec wl-paste -t text --watch clipman store
 
 exec flatpak run org.telegram.desktop -autostart

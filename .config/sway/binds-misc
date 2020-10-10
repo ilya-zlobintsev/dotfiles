@@ -14,3 +14,8 @@ bindsym $mod+F3 exec playerctl next
 
 bindsym $mod+f9 exec brightnessctl s 10%-
 bindsym $mod+f10 exec brightnessctl s 10%+
+
+mode passthrough {
+	bindsym $mod+Pause mode default
+}
+bindsym $mod+Pause mode passthrough

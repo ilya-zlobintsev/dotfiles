@@ -6,3 +6,4 @@ include binds-movement
 include binds-apps
 include binds-layout
 include binds-misc
+include autostart
