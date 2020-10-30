@@ -1,0 +1,8 @@
+[alias]
+    st = status
+    cm = commit -m
+    df = diff
+    ca = commit -a -m
+
+[include]
+    path = ~/.gitcredentials
