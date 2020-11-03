@@ -30,6 +30,8 @@ bindsym --to-code $mod+r mode "resize"
 
 bindsym --to-code $mod+Ctrl+$left resize shrink width 20px
 bindsym --to-code $mod+Ctrl+$right resize grow width 20px
+bindsym --to-code $mod+Ctrl+$up resize grow height 20px
+bindsym --to-code $mod+Ctrl+$down resize shrink height 20px
 
 bindsym --to-code $mod+Shift+minus move scratchpad
 bindsym --to-code $mod+minus scratchpad show

@@ -2,11 +2,11 @@ bindsym --to-code $mod+Shift+r reload
 
 bindsym --to-code $mod+Shift+e exec wlogout
 
-bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ 
-bindsym XF86AudioLowerVolume exec amixer sset Master 5%- 
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec amixer sset Master toggle 
 
-bindsym --to-code $mod+grave exec toggle-mute.sh
+#bindsym --to-code $mod+grave exec toggle-mute.sh
 
 bindsym $mod+F1 exec playerctl play-pause 
 bindsym $mod+F2 exec playerctl previous
