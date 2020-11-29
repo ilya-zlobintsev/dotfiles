@@ -2,6 +2,7 @@ include vars
 include output
 include input 
 include rules
+include rules.host
 include binds-movement
 include binds-apps
 include binds-layout
