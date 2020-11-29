@@ -18,7 +18,8 @@
     },
 
     "clock": {
-        "format": "<span size=\"larger\">{:%a, %d.%m.%y %H:%M}</span>"
+        "interval": 1,
+        "format": "<span size=\"larger\">{:%a, %d.%m.%y %H:%M:%S}</span>",
     },
 
     "network": {
@@ -77,14 +78,4 @@
         "format": "<span size=\"larger\"> {}</span>",
         "tooltip": false
     },
-    "custom/mediaplayer": {
-        "exec": "playerctl metadata --format \"{{ artist }} - {{ title }}\"",
-        "format": "<span size=\"larger\">{}</span>",
-        "interval": 1,
-        "on-click": "alacritty -e ncmpcpp"
-    },
-
-    "wlr/taskbar": {
-    }
-    
 }

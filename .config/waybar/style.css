@@ -18,7 +18,7 @@ window#waybar.firefox {
 }
 
 window#waybar.Alacritty {
-    background: rgba(24, 24, 24, 0.9);
+    background: rgba(24, 24, 24, 1);
     color: white;
 }
 
@@ -27,8 +27,13 @@ window#waybar.discord {
     color: white;
 }
 
-window#waybar.empty {
+/*window#waybar.empty {
     background: rgba(12, 12, 13, 0.5);
+    color: white;
+}*/
+
+window#waybar.empty {
+    background: rgba(12, 12, 13, 1);
     color: white;
 }
 
