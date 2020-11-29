@@ -6,9 +6,4 @@ input type:keyboard {
     repeat_rate 60
 }
 
-input type:pointer {
-    pointer_accel -0.4
-    accel_profile flat
-}
-
 seat * hide_cursor 10000
