@@ -3,6 +3,10 @@ bar {
 }
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
+for_window [title="LACT"] floating enable
+for_window [title="Log for "] floating enable
+for_window [title="Firefox — Sharing Indicator"] floating enable 
+for_window [title="Firefox — Sharing Indicator"] nofocus
 
 gaps inner 10
 gaps outer 2
@@ -10,3 +14,5 @@ default_border pixel 2
 smart_gaps on
 smart_borders on
 focus_follows_mouse no
+
+
