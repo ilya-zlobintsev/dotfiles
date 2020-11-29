@@ -6,4 +6,4 @@ set $up k
 set $right l
 
 set $term alacritty
-set $menu rofi -show
+set $menu sh -c "source /etc/profile.d/flatpak.sh && rofi -show"
