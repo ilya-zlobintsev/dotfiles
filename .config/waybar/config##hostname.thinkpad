@@ -4,7 +4,7 @@
     "height": 28,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock" ],
-    "modules-right": ["network", "cpu", "memory", "custom/xkblayout", "pulseaudio", "tray"],
+    "modules-right": ["network", "battery", "cpu", "memory", "custom/xkblayout", "pulseaudio", "tray"],
 
     "sway/workspaces": {
         "format": "<span size=\"larger\">{}</span>"
@@ -23,15 +23,13 @@
 
     "network": {
         "interface": "wlp3s0",
-        "format": "<span size=\"larger\">↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}</span>",
+        "tooltip-format": "↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}",
         "format-disconnected": "disconnected", //An empty format will hide the module.
-        "tooltip-format": "{ifname}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-        "tooltip-format-ethernet": "{ifname} ",
+        "format-wifi": "<span size=\"larger\">{essid} ({signalStrength}%) </span>",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 200,
         "interval": 3,
-        "on-click": "alacritty -e sudo nethogs"
+        "on-click": "alacritty -e nmtui"
     },
 
     "mpd": {
@@ -82,6 +80,17 @@
         "format": "<span size=\"larger\">{}</span>",
         "interval": 1,
         "on-click": "alacritty -e ncmpcpp"
+    },
+
+    "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span size=\"larger\">{capacity}% {icon}</span>",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 20
     },
 
     "wlr/taskbar": {
