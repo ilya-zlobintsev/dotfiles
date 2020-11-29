@@ -1,6 +1,8 @@
 include vars
 include output
+include output.host
 include input 
+include input.host
 include rules
 include rules.host
 include binds-movement
