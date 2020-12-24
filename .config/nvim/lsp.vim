@@ -1,9 +1,9 @@
-lua require'nvim_lsp'.pyls.setup{on_attach=require'diagnostic'.on_attach}
-lua require'nvim_lsp'.rust_analyzer.setup{on_attach=require'diagnostic'.on_attach}
+lua require'lspconfig'.pyls.setup{}
+lua require'lspconfig'.rust_analyzer.setup{}
 "lua require'nvim_lsp'.omnisharp.setup{}
 
 let g:diagnostic_show_sign = 0
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 set updatetime=750
 
 

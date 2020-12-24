@@ -2,7 +2,6 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lsp' 
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/deoplete-lsp'
-    Plug 'nvim-lua/diagnostic-nvim'
     Plug 'preservim/nerdtree'
     Plug 'kien/ctrlp.vim'
     "Plug 'rafi/awesome-vim-colorschemes'
