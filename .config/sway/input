@@ -5,3 +5,8 @@ input type:keyboard {
     repeat_delay 300
     repeat_rate 60
 }
+
+input 1356:2508:Sony_Interactive_Entertainment_Wireless_Controller_Touchpad {
+    natural_scroll enabled
+    tap enable
+}
