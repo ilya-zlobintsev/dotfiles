@@ -12,6 +12,7 @@ SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export RUSTUP_HOME:/home/ilya/\x2elocal/share/rustup
 SETUVAR --export VSCODE_PORTABLE:/home/ilya/\x2elocal/share/vscode
 SETUVAR --export WINEPREFIX:/media/data/wineprefixes/default
+SETUVAR --export XCURSOR_SIZE:16
 SETUVAR --export XDG_CONFIG_HOME:/home/ilya/\x2econfig
 SETUVAR --export XDG_CURRENT_DESKTOP:sway
 SETUVAR --export XDG_DATA_HOME:/home/ilya/\x2elocal/share
