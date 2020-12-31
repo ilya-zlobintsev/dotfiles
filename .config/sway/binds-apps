@@ -15,5 +15,6 @@ bindsym $mod+comma exec nemo
 bindsym $mod+apostrophe exec clipman pick -t rofi
 
 bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy -t image/png
+bindsym --to-code Ctrl+Shift+Print exec screenshot-imgur.sh
 bindsym --to-code $mod+Print exec grim ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
-bindsym --to-code Print exec grim - | wl-copy -t image/png
+#bindsym --to-code Print exec grim - | wl-copy -t image/png
