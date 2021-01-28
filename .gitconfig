@@ -1,6 +1,6 @@
 [alias]
     st = status
-    cm = commit -m
+    cm = commit
     df = diff
     ca = commit -a -m
 
