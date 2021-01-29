@@ -18,4 +18,6 @@ exec nm-applet --indicator
 exec clipman restore
 exec wl-paste -t text --watch clipman store
 
+exec xss-lock swaylock
+
 exec flatpak run org.telegram.desktop -autostart
