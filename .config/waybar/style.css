@@ -33,7 +33,8 @@ window#waybar.discord {
 }*/
 
 window#waybar.empty {
-    background: rgba(12, 12, 13, 1);
+    /*background: rgba(12, 12, 13, 1);*/
+    background: black;
     color: white;
 }
 
