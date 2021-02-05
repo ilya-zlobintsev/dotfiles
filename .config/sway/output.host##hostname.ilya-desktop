@@ -3,3 +3,5 @@ output HDMI-A-2 bg ~/Pictures/9CozxtU.jpg fill
 
 output DP-2 pos 0 0 res 1920x1080
 output HDMI-A-2 pos 1920 200 res 1360x768
+
+output DP-2 max_render_time 3
