@@ -14,9 +14,11 @@ bindsym --to-code $mod+u exec lutris
 bindsym --to-code $mod+comma exec dolphin
 bindsym --to-code $mod+apostrophe exec clipman pick -t rofi
 
-bindsym --to-code Ctrl+Print exec grim -g "$(slurp)" - | wl-copy -t image/png
+bindsym --to-code Ctrl+Print exec grimshot copy area
+bindsym --to-code Mod1+Print exec grimshot copy window
 bindsym --to-code Ctrl+Shift+Print exec screenshot-imgur.sh
-bindsym --to-code $mod+Print exec grim ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
-#bindsym --to-code Print exec grim - | wl-copy -t image/png
+bindsym --to-code $mod+Print exec grimshot save output  ~/Pictures/Screenshots/$(date +'%F_%H:%M.png')
+bindsym --to-code Print exec grimshot copy output
 
 bindsym --to-code $mod+F8 exec wifi-select
+bindsym --to-code $mod+F7 exec rofi-bluetooth
