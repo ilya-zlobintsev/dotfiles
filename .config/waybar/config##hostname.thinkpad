@@ -22,14 +22,14 @@
     },
 
     "network": {
-        "interface": "wlp3s0",
+        "interface": "wlan0",
         "tooltip-format": "↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}",
         "format-disconnected": "disconnected", //An empty format will hide the module.
         "format-wifi": "<span size=\"larger\">{essid} ({signalStrength}%) </span>",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 200,
         "interval": 3,
-        "on-click": "alacritty -e nmtui"
+        "on-click": "wifi-select"
     },
 
     "mpd": {

@@ -5,5 +5,5 @@ configuration {
     combi-hide-mode-prefix: true;
     drun-match-fields: [name,generic,categories];
     font: "Source Code Pro 12";
-    theme: "sidetab";
 }
+@import "/usr/share/rofi/themes/Arc-Dark.rasi"
