@@ -3,7 +3,7 @@ bar {
 }
 
 for_window [app_id="org.kde.kdeconnect-indicator"] floating enable
-for_window [title="LACT"] floating enable
+for_window [title="LACT^"] floating enable
 for_window [title="Log for "] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable 
 for_window [title="Firefox — Sharing Indicator"] nofocus
