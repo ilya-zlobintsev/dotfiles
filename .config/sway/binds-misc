@@ -12,8 +12,14 @@ bindsym $mod+F1 exec playerctl play-pause
 bindsym $mod+F2 exec playerctl previous
 bindsym $mod+F3 exec playerctl next 
 
-bindsym $mod+f9 exec brightnessctl s 10%-
-bindsym $mod+f10 exec brightnessctl s 10%+
+set $brightness_up exec brightnessctl s 10%+
+set $brightness_down exec brightnessctl s 10%-
+
+bindsym $mod+f5 $brightness_down
+bindsym $mod+f6 $brightness_up
+
+bindsym XF86MonBrightnessUp $brightness_up
+bindsym XF86MonBrightnessDown $brightness_down
 
 mode passthrough {
 	bindsym $mod+Pause mode default
