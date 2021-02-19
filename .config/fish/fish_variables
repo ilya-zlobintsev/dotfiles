@@ -10,6 +10,7 @@ SETUVAR --export QT_QPA_PALTFORMTHEME:qt5ct
 SETUVAR --export QT_QPA_PLATFORM:wayland
 SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export RUSTUP_HOME:/home/ilya/\x2elocal/share/rustup
+SETUVAR --export SSH_AUTH_SOCK:/run/user/1000/keyring/ssh
 SETUVAR --export VSCODE_PORTABLE:/home/ilya/\x2elocal/share/vscode
 SETUVAR --export WINEPREFIX:/media/data/wineprefixes/default
 SETUVAR --export XCURSOR_SIZE:16
