@@ -1,5 +1,5 @@
 input type:keyboard {
-    xkb_layout us-german-umlaut,ru,ua
+    xkb_layout eu,ru,ua
     #xkb_options grp:win_space_toggle,caps:escape,compose:ralt
     xkb_options grp:win_space_toggle,caps:escape
 
@@ -7,8 +7,9 @@ input type:keyboard {
     repeat_rate 60
 }
 
-input 1356:2508:Sony_Interactive_Entertainment_Wireless_Controller_Touchpad {
+input 1356:2508:Wireless_Controller_Touchpad {
     events disabled
     natural_scroll enabled
     tap enable
 }
+
