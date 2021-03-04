@@ -6,6 +6,7 @@ SETUVAR --export CHROOT:/media/data/chroot/
 SETUVAR --export EDITOR:nvim
 SETUVAR --export --path GOPATH:/home/ilya/\x2elocal/share/go
 SETUVAR --export MANGOHUD:1
+SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR --export QT_QPA_PALTFORMTHEME:qt5ct
 SETUVAR --export QT_QPA_PLATFORM:wayland
 SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
