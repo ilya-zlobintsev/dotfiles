@@ -1,10 +1,6 @@
 set termguicolors
-colorscheme dalton
-hi Normal guibg=NONE ctermbg=NONE
-"hi Pmenu guibg=darkred ctermbg=darkred
+colorscheme embark
 
-let g:python_highlight_all = 1
-
-let g:deoplete#enable_at_startup = 1
-let g:float_preview#docked=1
+set number relativenumber
+set signcolumn=yes
 

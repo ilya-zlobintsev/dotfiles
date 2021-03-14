@@ -1,18 +1,17 @@
-call plug#begin(stdpath('data') . '/plugged') 
-    Plug 'neovim/nvim-lsp' 
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'Shougo/deoplete-lsp'
-    Plug 'preservim/nerdtree'
-    Plug 'kien/ctrlp.vim'
-    "Plug 'rafi/awesome-vim-colorschemes'
-    Plug 'edersonferreira/dalton-vim'
-    "Plug 'vim-python/python-syntax'
-    "Plug 'christoomey/vim-tmux-navigator'
-    "Plug 'benmills/vimux'
-    Plug 'preservim/nerdtree'
-    Plug 'ncm2/float-preview'
-    Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
-    Plug 'RishabhRD/popfix'
-    "Plug 'RishabhRD/nvim-lsputils'
+call plug#begin('~/.vim/plugged')
+
+Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'kjwon15/vim-transparent'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'RishabhRD/popfix'
+Plug 'RishabhRD/nvim-lsputils'
+
+Plug '/usr/share/nvim/site/plugin'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 call plug#end()
 
+map <silent> <leader>R :source ~/.config/nvim/init.vim<CR> :PlugClean<CR> :PlugInstall<CR>
