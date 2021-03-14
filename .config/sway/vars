@@ -5,5 +5,5 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term kitty
 set $menu sh -c "source /etc/profile.d/flatpak.sh && rofi -show"
