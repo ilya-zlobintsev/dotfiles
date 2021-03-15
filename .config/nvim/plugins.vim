@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data'))
 
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'kjwon15/vim-transparent'
