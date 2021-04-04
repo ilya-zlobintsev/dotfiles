@@ -3,3 +3,5 @@ if status is-login
         exec sway
     end
 end
+
+systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
