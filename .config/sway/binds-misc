@@ -1,6 +1,6 @@
 bindsym --to-code $mod+Shift+r reload
 
-bindsym --to-code $mod+Shift+e exec wlogout
+bindsym --to-code $mod+Shift+e exec exit-menu.sh
 
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
