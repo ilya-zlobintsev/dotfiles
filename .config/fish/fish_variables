@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export CARGO_HOME:/home/ilya/\x2elocal/share/cargo
+SETUVAR --export GTK_USE_PORTAL:1
 SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR --export RUSTUP_HOME:/home/ilya/\x2elocal/share/rustup
 SETUVAR __fish_initialized:3100
