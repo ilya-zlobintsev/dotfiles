@@ -4,7 +4,13 @@
     "height": 28,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock" ],
-    "modules-right": ["network", "cpu", "memory", "sway/language", "pulseaudio", "tray"],
+    "modules-right": ["custom/controller-battery", "network", "cpu", "memory", "sway/language", "pulseaudio", "tray"],
+
+	"custom/controller-battery": {
+		"format": "<span size=\"larger\">🎮 {}%</span>",
+		"interval": 60,
+		"exec": "$HOME/.local/bin/controller-battery.sh"
+	},
 
     "sway/workspaces": {
         "format": "<span size=\"larger\">{}</span>"
