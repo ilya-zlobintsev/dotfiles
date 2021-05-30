@@ -11,9 +11,10 @@ bindsym --to-code $mod+n exec $term -e ncmpcpp
 bindsym --to-code $mod+i exec firefox
 bindsym --to-code $mod+p exec flatpak run com.discordapp.Discord
 bindsym --to-code $mod+u exec lutris
-bindsym --to-code $mod+comma exec nemo
+bindsym --to-code $mod+comma exec nautilus
 bindsym --to-code $mod+apostrophe exec clipman pick -t rofi
 
+#bindsym --to-code Ctrl+Print exec flameshot gui
 bindsym --to-code Ctrl+Print exec grimshot copy area
 bindsym --to-code Mod1+Print exec grimshot copy window
 bindsym --to-code Ctrl+Shift+Print exec screenshot-imgur.sh
@@ -23,3 +24,6 @@ bindsym --to-code Print exec grimshot copy output
 bindsym --to-code $mod+F8 exec wifi-select
 bindsym --to-code $mod+F7 exec rofi-bluetooth
 bindsym --to-code $mod+equal exec rofi-rbw
+
+bindsym --to-code $mod+m exec sway-marker mark
+bindsym --to-code $mod+grave exec sway-marker goto
