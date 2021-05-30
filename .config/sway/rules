@@ -7,6 +7,8 @@ for_window [title="LACT^"] floating enable
 for_window [title="Log for "] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable 
 for_window [title="Firefox — Sharing Indicator"] nofocus
+for_window [app_id="flameshot"] floating enable
+for_window [app_id="com.nextcloud.desktopclient.nextcloud"] floating enable, move position 1400 0
 
 gaps inner 10
 gaps outer 2
