@@ -66,6 +66,9 @@ window#waybar.empty {
     border-bottom: 3px solid white;
 }
 
+#custom-weather {
+    margin-right: 5px;
+}
 
 #tray,
 #mpd {
