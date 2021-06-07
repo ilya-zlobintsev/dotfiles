@@ -1,22 +1,24 @@
 #!/bin/sh
 
-DISTRO="$(lsb_release -s -i)"
+source /etc/os-release
 
-if [ "$DISTRO" == "Arch" ]; then
+if [ "$ID" == "arch" ]; then
     sudo pacman -S --needed base-devel
     
     # Install yay if needed
-    if ! command -v yay $> /dev/null; then
+    if ! command -v paru $> /dev/null; then
         cd /tmp/
-        git clone https://aur.archlinux.org/yay.git
+        git clone https://aur.archlinux.org/paru.git
         cd yay
         makepkg -sci --noconfirm
         cd ..
         rm yay -rf
     fi
 
-    yay -Syu --needed --noconfirm - < ~/.config/yadm/pkglist
-    yay -Syu --needed --noconfirm - < ~/.config/yadm/pkglist.host
+    paru -S --needed --noconfirm - < ~/.config/yadm/pkglist
+    paru -S --needed --noconfirm - < ~/.config/yadm/pkglist.host
+
+	sudo chsh -s /bin/fish $USER
 
     git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/tpm
 fi

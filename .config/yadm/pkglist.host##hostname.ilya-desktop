@@ -1,7 +1,5 @@
 opencl-amd
-openrazer-meta
-polychromatic
 mangohud
-amdgpu-fan
 vulkan-radeon
 lib32-vulkan-radeon
+lact-git
