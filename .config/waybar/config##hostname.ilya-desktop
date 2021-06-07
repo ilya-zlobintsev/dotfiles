@@ -13,7 +13,7 @@
 	},
 
 	"custom/weather": {
-		"format": "{}",
+		"format": "<span size=\"larger\">{}</span>",
 		"tooltip": true,
 		"interval": 3600,
 		"exec": "waybar-wttr.py",
@@ -21,7 +21,7 @@
 	},
 
     "sway/workspaces": {
-        "format": "<span size=\"larger\">{}</span>"
+        "format": "<span size=\"larger\">{}</span>",
     },
 
 
@@ -32,7 +32,9 @@
     },
 
     "clock": {
-        "format": "<span size=\"larger\">{:%a, %d.%m.%y %H:%M}</span>"
+        "format": "<span size=\"larger\">{:%a, %d.%m.%y %H:%M}</span>",
+		"tooltip-format": "<big>{:%Y %B}\n<tt>{calendar}</tt></big>",
+        "on-click": "gsimplecal"
     },
 
     "network": {

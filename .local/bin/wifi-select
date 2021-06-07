@@ -1,2 +1,0 @@
-#!/bin/sh
-~/git/rofi-iwd-menu/rofi-wifi-menu.sh wlan0 3

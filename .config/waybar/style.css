@@ -13,7 +13,7 @@ window#waybar {
 }
 
 window#waybar.firefox {
-    background: rgba(12, 12, 13, 1);
+	background: #1c1b22;
     color: white;
 }
 
@@ -68,6 +68,7 @@ window#waybar.empty {
 
 #custom-weather {
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 #tray,
