@@ -1,9 +1,9 @@
-exec $idle
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment 2>/dev/null 
+exec dbus-update-activation-environment --systemd DISPLAT WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 
-#exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec systemctl --user import-environment
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+exec $idle
 
 exec_always import-gsettings \
     gtk-theme:gtk-theme-name \
@@ -12,7 +12,6 @@ exec_always import-gsettings \
 
 exec sleep 1 && dunst
 
-exec /usr/local/lib/xfce4/notifyd/xfce4-notifyd
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec /usr/lib/kdeconnectd
 exec kdeconnect-indicator
@@ -21,12 +20,10 @@ exec nm-applet --indicator
 #exec polychromatic-tray-applet
 
 #exec clipman restore
-exec wl-paste -t text --watch clipman store
+#exec wl-paste -t text --watch clipman store
 
 exec xss-lock swaylock
 
 exec sleep 3 && flatpak run org.telegram.desktop -autostart
-
-exec "/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh"
 
 exec sleep 5 && nextcloud
